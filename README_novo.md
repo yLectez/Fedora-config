@@ -138,7 +138,7 @@ sudo dnf install htop
 # Steam - Plataforma de Jogos
 sudo dnf install steam
 
-# Bottles - Compatibilidade Windows
+# Bottles - Compatibilidade com Windows
 sudo dnf install bottles
 
 # Webapp Manager - Gerenciador de Aplicativos Web
@@ -148,3 +148,17 @@ sudo dnf install webapp-manager
 # Minecraft Bedrock - Launcher de Minecraft
 flatpak install io.mrarm.mcpelauncher
 ```
+
+---
+
+## 📝 Notas Importantes
+
+- ⚠️ **Sempre faça backup** antes de executar comandos do sistema
+- 🧪 **Teste em um ambiente controlado** antes de aplicar em produção
+- 📖 **Leia os comentários** nos scripts antes de executar
+- 🔄 Se encontrar problemas, reverta as alterações ou reporte
+
+---
+
+**Última atualização:** Janeiro 2026  
+**Contribuições:** Bem-vindas! Sinta-se livre para melhorar este guia
