@@ -153,11 +153,11 @@ sudo dnf install webapp-manager
 # Minecraft Bedrock - Launcher de Minecraft
 flatpak install flathub io.mrarm.mcpelauncher
 
-# if crash on login, use this
+# caso houver um crash no login use o comando abaixo.
 flatpak override --nosocket=wayland --nosocket=fallback-x11 --socket=x11 io.mrarm.mcpelauncher
 ```
 ```bash
-# para animes
+# para animes, (nao e o metodo padrao de instalação mas e o que funciona.)
 sudo dnf install go
 go install github.com/alvarorichard/Goanime/cmd/goanime@latest
 cd go/bin
