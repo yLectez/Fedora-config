@@ -12,8 +12,7 @@ Caso algo neste código possa dar problema, altere e avise. Não quero atrapalha
 2. [Configurações de DNF](#configurações-de-dnf)
 3. [Limpeza Básica](#limpeza-básica)
 4. [Gerenciamento de Energia](#gerenciamento-de-energia)
-5. [Desktop Environment](#desktop-environment)
-6. [Recomendações Extras](#recomendações-extras)
+5. [Recomendações Extras](#recomendações-extras)
 
 ---
 
@@ -110,38 +109,18 @@ powerprofilesctl get
 
 ---
 
-## 🖥️ Desktop Environment
-
-### Otimizações GNOME (se usar GNOME)
-
-Desabilite recursos desnecessários para melhorar a performance.
-
-```bash
-# Desabilitar efeitos de animação
-# Recomendado somente em PC extremamente fraco (não ajuda muito)
-gsettings set org.gnome.desktop.interface enable-animations false
-
-# Desabilitar histórico de atividades (economia de recursos)
-gsettings set org.gnome.desktop.privacy remember-recent-files false
-```
-
----
-
 ## 👤 Recomendações Extras
 
 Ferramentas adicionais úteis para melhorar sua experiência no Fedora.
 
 ```bash
-# HTOP - Monitor de Processos
-sudo dnf install htop
-```
-```bash
 # Steam - Plataforma de Jogos
 sudo dnf install steam
 ```
 ```bash
-# Bottles - Compatibilidade com Windows
+# Bottles & wine - Compatibilidade com Windows
 sudo dnf install bottles
+sudo dnf install wine
 ```
 ```bash
 # Webapp Manager - Gerenciador de Aplicativos Web
@@ -157,7 +136,7 @@ flatpak install flathub io.mrarm.mcpelauncher
 flatpak override --nosocket=wayland --nosocket=fallback-x11 --socket=x11 io.mrarm.mcpelauncher
 ```
 ```bash
-# para animes, (nao e o metodo padrao de instalação mas e o que funciona.)
+# GOANIME - para animes, (nao e o metodo padrao de instalação mas e o que funciona.)
 sudo dnf install go
 go install github.com/alvarorichard/Goanime/cmd/goanime@latest
 cd go/bin
