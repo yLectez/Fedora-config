@@ -151,7 +151,10 @@ sudo dnf install webapp-manager
 ```
 ```bash
 # Minecraft Bedrock - Launcher de Minecraft
-flatpak install io.mrarm.mcpelauncher
+flatpak install flathub io.mrarm.mcpelauncher
+
+# if crash on login, use this
+flatpak override --nosocket=wayland --nosocket=fallback-x11 --socket=x11 io.mrarm.mcpelauncher
 ```
 ```bash
 # para animes
