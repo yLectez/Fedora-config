@@ -134,22 +134,34 @@ Ferramentas adicionais úteis para melhorar sua experiência no Fedora.
 ```bash
 # HTOP - Monitor de Processos
 sudo dnf install htop
-
+```
+```bash
 # Steam - Plataforma de Jogos
 sudo dnf install steam
-
+```
+```bash
 # Bottles - Compatibilidade com Windows
 sudo dnf install bottles
-
+```
+```bash
 # Webapp Manager - Gerenciador de Aplicativos Web
 # contem bugs visuais
 sudo dnf copr enable bazzite-org/webapp-manager
 sudo dnf install webapp-manager
-
+```
+```bash
 # Minecraft Bedrock - Launcher de Minecraft
 flatpak install io.mrarm.mcpelauncher
 ```
-
+```bash
+# para animes
+sudo dnf install go
+go install github.com/alvarorichard/Goanime/cmd/goanime@latest
+cd go/bin
+sudo mv goanime /usr/bin/
+cd
+goanime
+```
 ---
 
 ## 📝 Notas Importantes
