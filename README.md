@@ -33,90 +33,50 @@ sudo dnf upgrade kernel
 
 ---
 
-## 🔧 Configurações de DNF
+## 🔧 Configurações de DNF & Flatpak
 
 Instale repositórios adicionais e mantenha o cache atualizado.
 
 ```bash
 # Instalar RPM-Fusion
-sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-sudo dnf install https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf install \
+https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
-# Atualizar cache
-sudo dnf check-update
+sudo dnf update
+
+# Instalar Flathub
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 ```
 
 ---
 
-## 🧹 Limpeza Básica
+## 🎮 Jogos
 
-Libere espaço removendo arquivos desnecessários e limpando caches.
-
+Para jogos, apps recomendados e outros. (Requer RPMFUSION e FLATHUB)
 ```bash
-# Limpar cache de pacotes antigos
-sudo dnf clean all
-
-# Remover arquivos temporários
-sudo rm -rf /tmp/* &>/dev/null
-sudo rm -rf ~/.cache/* &>/dev/null
-
-# Limpar journals antigos (manter últimos 2 meses)
-sudo journalctl --vacuum=time=2months
-
-# Encontrar e remover .cache pesado
-du -sh ~/.cache
-rm -rf ~/.cache/mozilla  # Se usa Firefox
+sudo dnf install \
+lutris
+steam
 ```
 
----
-
-## ⚡ Gerenciamento de Energia
-
-### Para Laptop - Instalar PowerTop
-
-Otimize o consumo de energia em laptops com PowerTop.
-
+Para o Heroic game launcher (epic games), baixe o RPM no site oficial e use o comando abaixo.
+lembre de alterar a versão depois do "-"
 ```bash
-# Instalar e configurar powerTop
-sudo dnf install powertop
-
-# Executar com análise de economia de energia
-sudo powertop
-
-# Aplicar configurações automáticas ao iniciar
-sudo powertop --calibrate
-sudo powertop --auto-tune
+# para Heroic (epic games), baixe o original RPM e use o comando abaixo. (troque o nome.)
+# sudo dnf install ./heroic-0000.x86_64.rpm
 ```
 
-### Configurar Perfil de Energia
-
-Escolha o perfil de energia mais adequado para seu dispositivo.
-
 ```bash
-# Instalar power-profiles-daemon
-sudo dnf install power-profiles-daemon
-
-# Listar perfis disponíveis
-powerprofilesctl list
-
-# Definir perfil (power-saver, balanced, performance)
-# Provavelmente o balanced já basta, mas caso queira, coloque em performance
-powerprofilesctl set performance 
-
-# Verificar perfil atual
-powerprofilesctl get
+# ProtonPlus para baixar versões de proton. (recomendado o proton CachyOS)
+flatpak install flathub com.vysp3r.ProtonPlus
 ```
-
 ---
 
 ## 👤 Recomendações Extras
 
 Ferramentas adicionais úteis para melhorar sua experiência no Fedora.
 
-```bash
-# Steam - Plataforma de Jogos
-sudo dnf install steam
-```
 ```bash
 # Bottles & wine - Compatibilidade com Windows
 sudo dnf install bottles
