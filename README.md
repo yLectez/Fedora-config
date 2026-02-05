@@ -50,7 +50,7 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 
 ---
 
-## 🎮 Instalação de jogos e utilitários
+## 🎮 Instalação de launchers e utilitários
 
 Recomendações para jogos (requer RPM Fusion e Flathub):
 
